@@ -1,6 +1,7 @@
 import { meshLib } from 'react-isometric-projection';
+const { Group, Rect, Pyramid, jsxTagToObj } = meshLib;
 
-/** @jsx parseXMLTags **/
+/** @jsx jsxTagToObj **/
 
 export default {
   RED_CUBE: ({ position: p, dimensions: d }) => (
@@ -26,7 +27,7 @@ export default {
       <Rect
         position=".375 0 .375"
         dimensions=".25 1 .25"
-        colors=['#420', '#420', '#301A00']
+        colors={['#420', '#420', '#301A00']}
       />
       <Pyramid
         tipPoint=".5 3 .5"
