@@ -1,4 +1,4 @@
-// Transfroms underscore-separated capital case strings into space-separated title-case strings
+// Transforms underscore-separated capital case strings into space-separated title-case strings
 // For example: 'FOO_BAZ_BAR' => 'Foo Baz Bar'
 
 export default str => {
