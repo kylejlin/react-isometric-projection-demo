@@ -23,6 +23,14 @@ class App extends Component {
       scrollY: 0,
       isMouseDown: false
     };
+
+    window.addEventListener('touchmove', e => {
+      const targetName = '' + e.target;
+
+      if (targetName.indexOf('SVG') > -1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
   }
 
   render() {
@@ -94,6 +102,7 @@ class App extends Component {
     try {
       const { code } = Babel.transform(src, OPTIONS);
 
+      // eslint-disable-next-line
       const mesh = eval(code)(meshLib);
 
       this.setState({ mesh, errorMessage: '' });
